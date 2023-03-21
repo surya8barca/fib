@@ -1,0 +1,187 @@
+.title {
+  font-family: Graphik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.menu-bar {
+  position: absolute;
+  height: 60px;
+  width: 100vw;
+  border-radius: 0px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
+}
+
+.divider{
+  color: #969686;
+   padding-top: 2px; 
+   font-size: 24px;
+   margin-left: 20px;
+}
+.my-concerto {
+  font-family: Graphik;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 18px;
+  font-weight: bold;
+
+
+}
+
+.nav-link {
+  padding-right: .5rem !important;
+  padding-left: .5rem !important;
+}
+
+.personclass {
+  margin-top: 16px;
+  color: black !important;
+}
+
+.navbar-brand {
+  color: #ffffff;
+  align-content: center;
+}
+
+.text-white {
+  color: black !important; 
+}
+
+.text-black {
+  cursor: pointer;
+  color: black;
+}
+
+.headerText {
+  margin-top: 0px;
+  font-size: large !important;
+}
+
+.userDesc {
+  margin-right: 0px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.exitapp {
+  margin-top: 17px;
+  cursor: pointer;
+  color: black !important;
+  cursor: pointer;
+}
+.navbar>.container-fluid{
+  justify-content: start;
+}
+.navbar-nav {
+  flex-direction: row;
+}
+
+.top-left{
+  margin-right: 20%;
+}
+
+.logo {
+  margin-left: 10%;
+  margin-top: 50%;
+}
+
+.headerDesc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 50px;
+}
+
+.myconcerto {
+  color: #969686;
+  font-size: 12px;
+  font-family: graphik;
+  padding-top: 10px;
+  margin: 0px;
+  line-height: 0px;
+  cursor: pointer;
+}
+
+.conversion {
+  cursor: pointer;
+  font-size: 22px;
+  font-family: graphik;
+  padding: 0px;
+  margin: 0px;
+}
+
+.mainWrapper {
+  border-radius: 30px;
+  display: inline-block;
+  overflow: hidden;
+  background: white;
+  border: 1px solid #cccccc;
+  width: 480px;
+  height: 53px
+}
+
+.selectWrapper {
+  border-radius: 36px;
+  display: inline-block;
+  overflow: hidden;
+  background: white;
+  border: 2px solid Blue;
+  width: 135px;
+  height: 51px
+}
+
+.textbox {
+
+  display: inline-block;
+  overflow: hidden;
+  background: white;
+  width: 274px;
+  height: 51px;
+  font-size: 16px;
+  padding: 8px;
+}
+
+.searchButton {
+  display: inline-block;
+  overflow: hidden;
+  margin-left: 22px;
+  padding-bottom: 1px;
+
+}
+
+.form-select{
+  padding: 0.75rem 2.25rem 0.375rem 0.75rem;
+}
+.form-control{
+  border: none;
+}
+.buttoncss {
+  border-radius: 36px;
+  background-color: blue;
+  height: 47px;
+  width: 47px;
+  border: 1px solid Blue;
+  padding-top: 12px;
+  color: #ffffff;
+}
+
+.textCss {
+
+  width: 200px;
+  margin-left: 10px;
+
+}
+
+.commonCss {
+  margin-bottom: 18px;
+}
+
+.buttonCss {
+  background-color: blue;
+  border-radius: 36px;
+}
+.font-size{
+  font-size: 15px;
+}
