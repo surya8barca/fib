@@ -16,7 +16,7 @@ import Divider from '@mui/material/Divider';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import SideNavItems from './sideNavItems';
 import Tooltip from '@mui/material/Tooltip';
-import GmailTreeView from './sideNavTree';
+import Navbar from '../navbar/navbar';
 
 const drawerWidth = 280;
 let mainMenuStyle={
@@ -58,18 +58,6 @@ const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
 })(({ theme, open }) => ({
   zIndex: theme.zIndex.drawer + 1,
-  transition: theme.transitions.create(['width', 'margin'], {
-    easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen,
-  }),
-  ...(open && {
-    marginLeft: drawerWidth,
-    width: `calc(100% - ${drawerWidth}px)`,
-    transition: theme.transitions.create(['width', 'margin'], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  }),
 }));
 
 const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
@@ -88,7 +76,6 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
   }),
 );
 
-let heading = 'Accenture';
 
 
 
@@ -96,16 +83,11 @@ let heading = 'Accenture';
 export default function Sidenav() {
   const [open, setOpen] = React.useState(false);
 
-
   return (
     <>
       <CssBaseline />
       <AppBar position="fixed">
-        <Toolbar>
-          <Typography variant="h6" noWrap component="div">
-            {heading}
-          </Typography>
-        </Toolbar>
+        <Navbar></Navbar>
       </AppBar>
       <Drawer PaperProps={{
         sx: {

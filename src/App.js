@@ -5,13 +5,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // Bootstrap Bundle JS
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import Sidenav from './layouts/sidenav/sidenav';
-import NavBar from "./layouts/navbar/Navbar"
+// import NavBar from "./layouts/navbar/navbar"
 
 function App() {
   return (
     <div className="App">
-        <NavBar></NavBar>
-        {/* <Sidenav></Sidenav> */}
+        <Sidenav></Sidenav>
     </div>
   );
 }
