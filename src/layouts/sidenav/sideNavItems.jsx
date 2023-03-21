@@ -24,19 +24,6 @@ let screens=[
         {name:'Order to Cash',hasChild:false},
       ]}
     ]},
-    {name:'Enterprise Structure',hasChild:true,icon:'aspect_ratio',
-    children:[
-      {name:'Business Process',hasChild:true,children:[
-        {name:'Record to Report',hasChild:false},
-        {name:'Procure to Pay',hasChild:true,children:[
-          {name:'Manage Invoices',hasChild:false},
-          {name:'Process Payments',hasChild:false},
-          {name:'Reporting',hasChild:false}
-        ]},
-        {name:'Acquire to Retire',hasChild:false},
-        {name:'Order to Cash',hasChild:false},
-      ]}
-    ]}
   ]
 
 //css

@@ -9,9 +9,7 @@ const routing = (
   <Router>
       <Switch>
         <Route exact path="/" component={App} />
-
       </Switch>
- 
   </Router>
 );
 root.render(

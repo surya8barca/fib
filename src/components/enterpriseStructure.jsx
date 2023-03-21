@@ -1,6 +1,6 @@
 import React from 'react';
 
-const EntripriseStructure =() => {
+const EnterpriseStructure =() => {
     return (
         <>
         <div className="content">
@@ -11,4 +11,4 @@ const EntripriseStructure =() => {
 };
 
 
-export default EntripriseStructure;
+export default EnterpriseStructure;

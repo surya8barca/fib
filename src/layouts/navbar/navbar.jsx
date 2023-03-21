@@ -2,7 +2,7 @@
 import React from "react";
 import logo from "../../assets/image/logo.png";
 import "./navbar.css";
-import MaterialIcon, { colorPalette } from "material-icons-react";
+import MaterialIcon from "material-icons-react";
 
 const Navbar = () => {
   return (
