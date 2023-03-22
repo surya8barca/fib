@@ -8,7 +8,7 @@ import MainLayout from './layouts/mainLayout/mainLayout';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App">   
       <MainLayout/>
     </div>
   );

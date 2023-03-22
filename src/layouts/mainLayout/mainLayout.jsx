@@ -13,8 +13,7 @@ import SideNavItems from '../sidenav/sideNavItems'
 import Tooltip from '@mui/material/Tooltip';
 import Navbar from '../navbar/navbar';
 import { Box } from '@mui/system';
-import EnterpriseStructure from '../../components/enterpriseStructure'
-
+import { Outlet } from 'react-router-dom/dist';
 
 const drawerWidth = 280;
 let mainMenuStyle = {
@@ -122,7 +121,8 @@ export default function MainLayout() {
             <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
                 <>
                     <DrawerHeader />
-                    <EnterpriseStructure></EnterpriseStructure>
+                    {/* <RouterPage></RouterPage> */}
+                    <Outlet/>
                 </>
             </Box>
         </Box>

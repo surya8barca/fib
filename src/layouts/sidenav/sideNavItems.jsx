@@ -9,16 +9,18 @@ import ExpandMore from '@mui/icons-material/ExpandMore';
 import Tooltip from '@mui/material/Tooltip';
 import MaterialIcon from 'material-icons-react';
 
+import { Link } from 'react-router-dom/dist';
+
 
 let screens=[
-    {name:'Enterprise Structure',hasChild:true,icon:'aspect_ratio',
+    {name:'Enterprise Structure',hasChild:true,route:'/enterprise-structure',icon:'aspect_ratio',
     children:[
       {name:'Business Process',hasChild:true,children:[
         {name:'Record to Report',hasChild:false},
         {name:'Procure to Pay',hasChild:true,children:[
-          {name:'Manage Invoices',hasChild:false},
-          {name:'Process Payments',hasChild:false},
-          {name:'Reporting',hasChild:false}
+          {name:'Manage Invoices',hasChild:false,route:'/manage-invoices'},
+          {name:'Process Payments',hasChild:false,route:'/process-payments'},
+          {name:'Reporting',hasChild:false,route:'/reporting'}
         ]},
         {name:'Acquire to Retire',hasChild:false},
         {name:'Order to Cash',hasChild:false},
@@ -138,6 +140,7 @@ const openSubMenu3 = (screen,index) => {
             {/* Main Menu */}
 
             <ListItemButton 
+             component={Link} to={screen.route}
              style={(dropdownOpenMain===indexL1)?selectedListItem:{}}
              onClick={()=>openSubMenu(screen,indexL1)}>
             <Tooltip title={screen.name}>
@@ -156,6 +159,7 @@ const openSubMenu3 = (screen,index) => {
             {screen.children.map((child1,indexL2) =>(
               <>
               <ListItemButton
+                component={Link} to={child1.route}
                 style={(dropdownChild1===indexL2)?selectedChildItem:{}}
                 onClick={()=>openSubMenu1(child1,indexL2)}>
                 <ListItemText primaryTypographyProps={{ style: child1Style }} primary={child1.name} />
@@ -168,7 +172,8 @@ const openSubMenu3 = (screen,index) => {
                 <List sx={{ pl: 2 }} component="div" disablePadding>
                 {child1.children.map((child2,indexL3)=>(
                   <>
-                  <ListItemButton 
+                  <ListItemButton
+                  component={Link} to={child2.route} 
                   style={(dropdownChild1===indexL2)?selectedChildItem:{}}
                   onClick={()=>openSubMenu2(child2,indexL3)}>
                 <ListItemText primaryTypographyProps={{ style: child2Style }} primary={child2.name} />
@@ -182,6 +187,7 @@ const openSubMenu3 = (screen,index) => {
                 {child2.children.map((child3,indexL4)=>(
                   <>
                   <ListItemButton 
+                  component={Link} to={child3.route}
                   style={(dropdownChild2===indexL3)?selectedChildItem:{}}
                   onClick={()=>openSubMenu3(child3,indexL4)}>
                 <ListItemText primaryTypographyProps={{ style: child3Style }} primary={child3.name} />
