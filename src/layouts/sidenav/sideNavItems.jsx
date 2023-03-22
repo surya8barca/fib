@@ -37,19 +37,19 @@ let mainMenuStyle={
 }
 
 let child1Style={
-  fontSize:'15px',
+  fontSize:'16px',
   fontWeight:'600',
   fontStyle:'Graphik'
 }
 
 let child2Style={
-  fontSize:'14px',
+  fontSize:'16px',
   fontWeight:'300',
   fontStyle:'Graphik'
 }
 
 let child3Style={
-  fontSize:'12px',
+  fontSize:'16px',
   fontStyle:'Graphik'
 }
 

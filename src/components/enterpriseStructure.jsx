@@ -1,10 +1,11 @@
 import React from 'react';
+import Banner from '../layouts/header/banner';
 
 const EnterpriseStructure =() => {
     return (
         <>
         <div className="content">
-            Enterprise Structure
+            <Banner title="Enterprise Structure"></Banner>
         </div>
         </>
     );

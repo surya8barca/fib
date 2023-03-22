@@ -1,12 +1,12 @@
 
 import React from 'react';
 
+import Banner from '../layouts/header/banner';
+
 const ManageInvoices =() => {
     return (
         <>
-        <div className="content">
-            Manage Invoices
-        </div>
+        <Banner title="Manage Invoices"></Banner>
         </>
     );
 };

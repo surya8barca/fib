@@ -1,0 +1,15 @@
+.bannerBox {
+    background: linear-gradient(258.5deg, #35155E 14.37%, #5C34B3 83.08%);
+    height: 80px;
+    max-width: 100%;
+    background-size: cover;
+    border-radius: 16px;
+}
+
+.label{
+    margin-left: 30px;
+    font-family: Graphik;
+    font-size: 22px;
+    color: #FFFFFF;
+    opacity: 0.8;
+}

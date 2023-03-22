@@ -1,12 +1,11 @@
 
 import React from 'react';
+import Banner from '../layouts/header/banner';
 
 const Reporting =() => {
     return (
         <>
-        <div className="content">
-            Reporting
-        </div>
+        <Banner title="Reporting"></Banner>
         </>
     );
 };
