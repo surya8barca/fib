@@ -54,16 +54,19 @@ let child3Style={
 }
 
 let selectedListItem={
-  color: '#0041F0',
   backgroundColor: '#E8EDFA',
   borderLeft: '4px solid #0041f0'
 } 
 
 let selectedChildItem={
-  fontWeight:'bold',
   backgroundColor: '#E8EDFA',
   borderLeft: '2px solid #0041f0'
 } 
+
+let selectedTab={
+  color: '#0041F0',
+}
+
 
 let selectedIcon={
   color: '#0041F0',
@@ -80,8 +83,8 @@ export default function SideNavItems() {
     
 
     const openSubMenu = (screen,index) => {
-        if(screen.hasChild)
-        {
+        // if(screen.hasChild)
+        // {
             if(dropdownOpenMain===index)
             {
                 setDropDownOpen(-1);
@@ -90,12 +93,12 @@ export default function SideNavItems() {
             {
                 setDropDownOpen(index)
             }
-        }
+        // }
     };
 
     const openSubMenu1 = (screen,index) => {
-      if(screen.hasChild)
-      {
+      // if(screen.hasChild)
+      // {
           if(dropdownChild1===index)
           {
               setDropDownOpen1(-1);
@@ -104,11 +107,11 @@ export default function SideNavItems() {
           {
               setDropDownOpen1(index)
           }
-      }
+      // }
   };
   const openSubMenu2 = (screen,index) => {
-    if(screen.hasChild)
-    {
+    // if(screen.hasChild)
+    // {
         if(dropdownChild2===index)
         {
             setDropDownOpen2(-1);
@@ -117,11 +120,11 @@ export default function SideNavItems() {
         {
             setDropDownOpen2(index)
         }
-    }
+    // }
 };
 const openSubMenu3 = (screen,index) => {
-  if(screen.hasChild)
-  {
+  // if(screen.hasChild)
+  // {
       if(dropdownChild3===index)
       {
           setDropDownOpen3(-1);
@@ -130,7 +133,7 @@ const openSubMenu3 = (screen,index) => {
       {
           setDropDownOpen3(index)
       }
-  }
+  // }
 };
 
     return (
@@ -139,8 +142,9 @@ const openSubMenu3 = (screen,index) => {
             <>
             {/* Main Menu */}
 
-            <ListItemButton 
+            <ListItemButton   
              component={Link} to={screen.route}
+             sx={(dropdownOpenMain===indexL1)?selectedTab:{}}
              style={(dropdownOpenMain===indexL1)?selectedListItem:{}}
              onClick={()=>openSubMenu(screen,indexL1)}>
             <Tooltip title={screen.name}>
@@ -155,11 +159,12 @@ const openSubMenu3 = (screen,index) => {
           {screen.hasChild && <Collapse in={dropdownOpenMain===indexL1} timeout="auto" unmountOnExit>
 
             {/* Child Layer 1 */}
-          <List sx={{ pl: 7 }} component="div" disablePadding>
+          <List sx={{pl:7,backgroundColor: '#E8EDFA',}} component="div" disablePadding>
             {screen.children.map((child1,indexL2) =>(
               <>
               <ListItemButton
                 component={Link} to={child1.route}
+                sx={(dropdownChild1===indexL2)?selectedTab:{}}
                 style={(dropdownChild1===indexL2)?selectedChildItem:{}}
                 onClick={()=>openSubMenu1(child1,indexL2)}>
                 <ListItemText primaryTypographyProps={{ style: child1Style }} primary={child1.name} />
@@ -174,6 +179,7 @@ const openSubMenu3 = (screen,index) => {
                   <>
                   <ListItemButton
                   component={Link} to={child2.route} 
+                  sx={(dropdownChild2===indexL3)?selectedTab:{}}
                   style={(dropdownChild1===indexL2)?selectedChildItem:{}}
                   onClick={()=>openSubMenu2(child2,indexL3)}>
                 <ListItemText primaryTypographyProps={{ style: child2Style }} primary={child2.name} />
@@ -188,6 +194,7 @@ const openSubMenu3 = (screen,index) => {
                   <>
                   <ListItemButton 
                   component={Link} to={child3.route}
+                  sx={(dropdownChild3===indexL4)?selectedTab:{}}
                   style={(dropdownChild2===indexL3)?selectedChildItem:{}}
                   onClick={()=>openSubMenu3(child3,indexL4)}>
                 <ListItemText primaryTypographyProps={{ style: child3Style }} primary={child3.name} />
