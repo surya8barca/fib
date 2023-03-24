@@ -26,12 +26,12 @@ function Questionnaire(props) {
                         {element.type==='checkbox' &&
                         <CheckboxGroupInput data={element}/>
                         }
-                        {/* for form field-number */}
+                        {/* for dropdowm select */}
                         {element.type==='dropdown' &&
                         <DropdownInput data={element}/>
                         }
                         {/* for form field */}
-                        {element.type==='formfield-number' &&
+                        {element.type.includes('formfield') &&
                         <InputField data={element}/>
                         }
                     </div>    

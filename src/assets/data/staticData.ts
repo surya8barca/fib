@@ -9,11 +9,23 @@ export const Enterprise_Structure: any[] = [
   
 
 export const manageInvoicesQuestions:any[]=[
-  {questionNo:1,question:'Do you use block invoice functionality?',type:'radio',options:['Yes','No'],conditional:true},
-  {questionNo:2,question:'What are the modes of business communication used for payments to vendors?',type:'checkbox',options:['Account statement','Open Item List','Failed payments','Bill of exchange charges statement','Cash document','Others',],conditional:true},
-  {questionNo:3,question:'Are there Intercompany Payables?',type:'radio',options:['Yes','No'],conditional:true},
-  {questionNo:4,question:'Select Type of Invoices used:',type:'checkbox',options:['PO Invoices','Non-Po Invoices','Credit Memo','Debit Memo','Others',],conditional:true},
-  {questionNo:5,question:'How many bank accounts do you have for procurement?',type:'formfield-number',conditional:true}
+  {questionNo:1,question:'Do you use block invoice functionality?',type:'radio',options:['Yes','No'],conditional:true,conditionType:'extraQuestion',selecionTrigger:'Yes',
+  conditionData:[{nestedQuestion:true,question:'Please Specify the block Invoice functionality:',type:'checkbox',options:['AP Duplicate invoice','AP PO invoice block','Invoice verification','AP Other reason'],conditional:true,conditionType:'extraQuestion',selecionTrigger:'AP Other reason',
+  conditionData:[{nestedQuestion:true,question:'Name the Invoice:',type:'formfield-text',conditional:false}]
+}],
+},
+  {questionNo:2,question:'What are the modes of business communication used for payments to vendors?',type:'checkbox',options:['Account statement','Open Item List','Failed payments','Bill of exchange charges statement','Cash document','Others',],conditional:true,conditionType:'extraQuestion',selecionTrigger:'Others',
+  conditionData:[{nestedQuestion:true,question:'Name the Correspondence Type:',type:'formfield-text',conditional:false}]
+},
+  {questionNo:3,question:'Are there Intercompany Payables?',type:'radio',options:['Yes','No'],conditional:true,conditionType:'extraQuestion',selecionTrigger:'Yes',
+  conditionData:[{nestedQuestion:true,question:'How many entities use intercompany payable?',type:'formfield-number',conditional:false},]
+},
+  {questionNo:4,question:'Select Type of Invoices used:',type:'checkbox',options:['PO Invoices','Non-Po Invoices','Credit Memo','Debit Memo','Others',],conditional:true,conditionType:'extraQuestion',selecionTrigger:'Others',
+  conditionData:[{nestedQuestion:true,question:'Name the Invoice:',type:'formfield-text',conditional:false}]
+},
+  {questionNo:5,question:'How many bank accounts do you have for procurement?',type:'formfield-number',conditional:true,conditionType:'arrayGeneration',selecionTrigger:'numberInput',
+  conditionData:[{nestedQuestion:true,question:'Name them:',type:'formfield-text',conditional:false}]
+}
 ]
 
 export const processPaymentsQuestions:any[]=[
