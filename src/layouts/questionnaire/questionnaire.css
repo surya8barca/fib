@@ -1,0 +1,17 @@
+.questionBox{
+    border-radius: calc(0.5 * var(--base-unit, 8px));
+    box-sizing: border-box;
+    padding:10px 20px;
+    background: var(--background, rgb(250, 250, 250));
+    box-shadow: 0px 1px 2px rgb(0 0 0 / 15%);
+    margin-bottom: 20px;
+}
+
+.optionsBox{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+}
